@@ -18,6 +18,9 @@ function performSearch() {
 async function checkWeather(city) {
 
     const response = await fetch(apiUrl + city + `&key=${apiKey}`);
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
     const data = await response.json();
 
 
@@ -31,5 +34,6 @@ async function checkWeather(city) {
     } else {
         console.error("No weather data found.");
     }
+    
     weatherIcon.src = data.current.condition.icon;
 }
