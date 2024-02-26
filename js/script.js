@@ -1,5 +1,5 @@
 const apiKey = "d5752951419e4f68a7b211843242302 ";
-const apiUrl = "http://api.weatherapi.com/v1/current.json?&aqi=yes&q=";
+const apiUrl = "https://api.weatherapi.com/v1/current.json?&aqi=yes&q=";
 const weatherIcon = document.querySelector(".weather-icon");
 
 document.querySelector(".search input").addEventListener("keydown", function (event) {
